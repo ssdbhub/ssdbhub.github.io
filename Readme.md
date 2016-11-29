@@ -22,7 +22,8 @@ C++, C#, [Java](#using-ssdb-with-different-languages-using-with-java),
 [Python](#using-ssdb-with-different-languages-using-with-python), 
 [Node.js](#using-ssdb-with-different-languages-using-with-node), 
 [Ruby](#using-ssdb-with-different-languages-using-with-ruby), 
-[PHP](#using-ssdb-with-different-languages-using-with-php) and [Go](#using-ssdb-with-different-languages-using-with-go).
+[PHP](#using-ssdb-with-different-languages-using-with-php) and 
+[Go](#using-ssdb-with-different-languages-using-with-go).
 Furthermore it's possible to communicate with SSDB using Redis clients.
 Below there is the [list of supported Redis commands](#Key-Value) and how they map to SSDB.
 
@@ -45,13 +46,7 @@ $ heroku addons:create ssdb
 
 Once SSDB has been added the following settings will be available in the app configuration:
  
-   `SSDB_HOST`
-   
-   `SSDB_PORT`
-   
-   `SSDB_PASSWORD`
-   
-   `SSDB_URL`
+   `SSDB_HOST`, `SSDB_PORT`, `SSDB_URL`, `SSDB_PASSWORD`
    
 which should be used to access the newly provisioned SSDB instance.
 This can be confirmed using the `heroku config:get` command.
@@ -555,13 +550,7 @@ Select SSDB from the Add-ons menu.
 In case of connection problems, please make sure you are using right credentials.
 They may be found in environment variables 
 
-`SSDB_HOST`
-
-`SSDB_PORT`
-
-`SSDB_URL`
-
-`SSDB_PASSWORD` 
+    `SSDB_HOST`, `SSDB_PORT`, `SSDB_URL`, `SSDB_PASSWORD` 
 
 which were discussed previously.
 
