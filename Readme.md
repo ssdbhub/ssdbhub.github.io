@@ -46,7 +46,12 @@ $ heroku addons:create ssdb
 
 Once SSDB has been added the following settings will be available in the app configuration:
  
-   `SSDB_HOST`, `SSDB_PORT`, `SSDB_URL`, `SSDB_PASSWORD`
+```shell
+SSDB_HOST
+SSDB_PORT
+SSDB_URL
+SSDB_PASSWORD
+```
    
 which should be used to access the newly provisioned SSDB instance.
 This can be confirmed using the `heroku config:get` command.
@@ -544,7 +549,12 @@ Select SSDB from the Add-ons menu.
 In case of connection problems, please make sure you are using right credentials.
 They may be found in environment variables 
 
-    `SSDB_HOST`, `SSDB_PORT`, `SSDB_URL`, `SSDB_PASSWORD` 
+```shell
+SSDB_HOST
+SSDB_PORT
+SSDB_URL
+SSDB_PASSWORD
+```
 
 which were discussed previously.
 
