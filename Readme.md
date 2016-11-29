@@ -99,7 +99,7 @@ $ heroku config:get SSDB_URL -s >> .env
 
 For more information, see [Heroku Local](https://devcenter.heroku.com/articles/heroku-local) article.
 
-# Using SSDB with Different Languages:
+# Using SSDB with Different Languages
 
 As already mentioned above SSDB has many client libraries in different programming languages. 
 Below are couple of examples on how you can apply them. 
@@ -131,9 +131,8 @@ String port = System.getenv("SSDB_PORT");
 SSDB ssdb = new SSDB(host, Integer.parseInt(port));
 ```
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```java
@@ -187,9 +186,8 @@ port = os.env["SSDB_PORT"]
 ssdb = ssdb.SSDB(host, port)
 ```
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```python 
@@ -230,9 +228,8 @@ var ssdb = require('ssdb');
 
 Then the connection pool should be created using environment variables.
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```javascript
@@ -284,9 +281,8 @@ import (
 
 Then the connection should be created using environment variables.
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```go
@@ -345,9 +341,8 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```ruby
@@ -387,9 +382,8 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
->warning
->SSDBHub enforces authentication on SSDB instance. After the client is 
->created, it should be authenticated with the password which is
+SSDBHub enforces authentication on SSDB instance. After the client is 
+created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
 ```ruby
