@@ -1,6 +1,6 @@
 
-We provide SSDB as a service.
-[SSDB](http://ssdb.io) is a high performance NoSQL database. 
+We provide [SSDB](http://ssdb.io) as a service.
+SSDB is a high performance NoSQL database. 
 
 SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
 databases. SSDB database is not bound to RAM and is capable of storing significantly 
@@ -18,7 +18,10 @@ including Java, Python, Node.js, Ruby, PHP, and Go.
 
 # Heroku Platform
 
-Heroku SSDBHub add-on is currently at beta stage, therefore the things in this section are not final and are subject to be changed.
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Heroku SSDBHub add-on is currently at beta stage, 
+  therehore the might be minor changes of functionality as well as of this document.
+</div>
 
 ## Provisioning the add-on
 
