@@ -1,5 +1,9 @@
+>warning
+>SSDBHub plugin is currently at beta stage, therefore 
+there might be minor changes in described functionality. If this happenes
+then the document will be updated accordingly.
 
-We provide [SSDB](http://ssdb.io) as a service.
+[SSDBHub](https://elements.heroku.com/addons/ssdb) provides SSDB as a service.
 
 SSDB is a high performance NoSQL database. 
 
@@ -13,25 +17,16 @@ For example, QIHOO 360 has moved their Redis instances to SSDB to provide servic
 to hundreds millions of its users. 
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
-SSDBHub provides one click solution for provisioning of SSDB node or cluster of nodes, 
-which may be accessed directly via SSDB client. 
-There are plenty of them, available in many languages 
-including C++, C#, Java, Python, Node.js, Ruby, PHP and Go.
-Below there are basic code samples of how to connect, 
-authenticate and execute commands with those clients.
-Furthermore it's possible to communicate with database using Redis clients.
-Below there is a list of supported Redis commands and how they map to SSDB.
-
-# Heroku Platform
-
-Warning! Heroku SSDBHub add-on is currently at beta stage, therefore 
-there might be minor changes in described functionality. If this happenes
-then the document will be updated accordingly.
+Adding [SSDBHub](https://elements.heroku.com/addons/ssdb) to any application will create SSDB cluster, which is already 
+configured and ready for use in the same application region. 
+SSDBHub can be accessed via API; it supports users’ libraries in many languages 
+including Java, Python, Node.js, Ruby, PHP, and Go.
 
 ## Provisioning the add-on
 
 SSDBHub plugin can be attached to a Heroku application via the CLI:
 
+> callout
 > [Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
 
 ```term 
