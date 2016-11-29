@@ -1,7 +1,7 @@
 
 We provide [SSDB](http://ssdb.io) as a service.
 
-SSDB is a high performance NoSQL database. 
+SSDB is a high performance NoSQL database.
 
 SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
 databases. SSDB database is not bound to RAM and is capable of storing significantly 
@@ -29,9 +29,10 @@ Below there is the [list of supported Redis commands](#Key-Value) and how they m
 
 # Heroku Platform
 
-* Heroku SSDBHub add-on is currently at beta stage, therefore 
+| Heroku SSDBHub add-on is currently at beta stage, therefore 
 there might be minor changes in described functionality. If this happenes
-then the document will be updated accordingly.
+then the document will be updated accordingly. |
+|---|
 
 ## Provisioning the add-on
 
@@ -44,7 +45,8 @@ $ heroku addons:create ssdb
 -----> Adding ssdb to sharp-mountain-4005... done, v18 (free)
 ```
 
-Once SSDB has been added the following settings will be available in the app configuration:
+Once SSDB is added to your app, the following variables will be added to environment 
+configuration:
  
 ```shell
 SSDB_HOST
@@ -53,12 +55,7 @@ SSDB_URL
 SSDB_PASSWORD
 ```
    
-which should be used to access the newly provisioned SSDB instance.
-This can be confirmed using the `heroku config:get` command.
-
-Once SSDB is added to your app the following settings will appear in the app 
-configuration: SSDB_HOST SSDB_PORT SSDB_PASSWORD. These should be used to 
-access the newly provisioned SSDB instance. 
+These should be used to access the newly provisioned SSDB instance. 
 Configuration variables can be confirmed using the heroku config:get command.
 
 ```term
@@ -99,8 +96,9 @@ $ heroku config:get SSDB_PASSWORD -s  >> .env
 $ heroku config:get SSDB_URL -s >> .env
 ```
 
-* Credentials and other sensitive configuration values should not be committed to source-control. 
-In Git exclude the `.env` file with: `echo .env >> .gitignore`.
+| Credentials and other sensitive configuration values should not be committed to source-control. 
+In Git exclude the `.env` file with: `echo .env >> .gitignore`. |
+|---|
 
 For more information, see [Heroku Local](https://devcenter.heroku.com/articles/heroku-local) article.
 
@@ -136,9 +134,10 @@ String port = System.getenv("SSDB_PORT");
 SSDB ssdb = new SSDB(host, Integer.parseInt(port));
 ```
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```java
 String pass = System.getenv("SSDB_PASSWORD");
@@ -191,9 +190,10 @@ port = os.env["SSDB_PORT"]
 ssdb = ssdb.SSDB(host, port)
 ```
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```python 
 pass = os.env["SSDB_PASSWORD"];
@@ -233,9 +233,10 @@ var ssdb = require('ssdb');
 
 Then the connection pool should be created using environment variables.
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```javascript
 
@@ -286,9 +287,10 @@ import (
 
 Then the connection should be created using environment variables.
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```go
 
@@ -346,9 +348,10 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```ruby
 ssdb.perform("auth", ENV['SSDB_PASSWORD'])
@@ -387,9 +390,10 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
-SSDBHub enforces authentication on SSDB instance. After the client is 
+| SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
-returned in SSDB_PASSWORD configuration variable.
+returned in SSDB_PASSWORD configuration variable. |
+|---|
 
 ```ruby
 ssdb.perform("auth", ENV['SSDB_PASSWORD'])
@@ -560,7 +564,9 @@ which were discussed previously.
 
 ## Migrating between plans
 
-* Application owners should carefully manage the migration timing to ensure proper application function during the migration process.
+| Application owners should carefully manage the migration timing to ensure 
+proper application function during the migration process. |
+|---|
 
 Use the `heroku addons:upgrade` command to migrate to a new plan.
 
@@ -574,7 +580,8 @@ $ heroku addons:upgrade ssdb:newplan
 
 SSDBHub plugin can be removed via the CLI.
 
-* This will destroy all associated data. The process is final and cannot be undone!
+| This will destroy all associated data. The process is final and cannot be undone! |
+|---|
 
 ```term
 $ heroku addons:destroy ssdb
