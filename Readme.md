@@ -5,7 +5,7 @@ SSDB is a high performance NoSQL database.
 
 SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
 databases. SSDB database is not bound to RAM and is capable of storing significantly 
-(by 100 times) more data, compared to in-memory datavases.
+(by 100 times) more data, compared to in-memory databases.
 
 Nowadays different companies are using SSDB in production for 
  high throughput, low-latency access to large data sets. 
@@ -14,11 +14,11 @@ to hundreds millions of its users.
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
 SSDBHub provides one click solution for provisioning of SSDB node or cluster of nodes, 
-which may be accessed directly via SSDB client. 
-There are plenty of them, available in many languages 
+which may be accessed directly via SSDB or Reids clients.
+SSDB clients are available in many languages 
 including C++, C#, Java, Python, Node.js, Ruby, PHP and Go.
-Below there are basic code samples of how to connect, 
-authenticate and execute commands with those clients.
+Below there are basic code samples of how to use them for connecting, 
+authenticating and sending commands to SSDB.
 Furthermore it's possible to communicate with database using Redis clients.
 Below there is a list of supported Redis commands and how they map to SSDB.
 
