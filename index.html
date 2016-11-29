@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/custom.css">-->
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" href="./css/animate.css"/>
     <script src="./js/jquery-2.1.0.js"></script>
@@ -31,23 +32,15 @@
             <nav class="navbar row">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html"><span
-                            class="et-icon-gears icon-sm icon-white zoomIn animated"></span> Compex</a>
-                    <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-1">
-                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
-                            class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
+                            class="et-icon-gears icon-sm icon-white zoomIn animated"></span> SSDBHub</a>
                 </div>
                 <div class="collapse navbar-collapse navbar-1">
                     <ul class="site-navigation nav navbar-nav">
                         <li>
-                            <a onclick="scrollToTarget('#services')">Services</a>
+                            <a onclick="scrollToTarget('#docs')">Docs</a>
                         </li>
                         <li>
-                            <a onclick="scrollToTarget('#team')">Team</a>
-                        </li>
-                        <li>
-                            <a onclick="scrollToTarget('#quote')">Get a Quote</a>
+                            <a onclick="scrollToTarget('#plans')">Plans</a>
                         </li>
                         <li>
                             <a onclick="scrollToTarget('#faq')">FAQ</a>
@@ -63,20 +56,34 @@
     <div class="bloc bgc-outer-space bg-city-overlay d-bloc" id="header">
         <div class="container bloc-xl">
             <div class="row">
-                <div class="col-sm-12">
-                        <img class="img-responsive center-block" src="img/ssdb-logo-full.png">
-                    <h3 class="text-center mg-lg tc-white">SSDBHub</h3>
+                <div class="col-sm-12" style="text-shadow: 2px 2px 4px #000000;">
+                    <img class="img-responsive center-block" src="img/ssdb-logo-full.png">
+                    <h3 class="text-center mg-lg tc-white">
+                        <span style="color: #EC971F;">SSDB</span><span style="color: #666464;">Hub</span>
+                    </h3>
+                    <h2 class="text-center mg-lg animated fadeInUp animDelay01">We are launching soon at
+                        <img src="img/heroku.png" hight="32px" width="32px">HEROKU</h2>
 
-                    <p class="text-center  mg-lg animated fadeInUp animDelay02">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-                        quis enim.
-                    </p>
+                    <div class="text-center mg-sm animDelay08 animated fadeInUp">
+                        Jump right in to become an alpha user.
+                    </div>
 
-                    <div class="text-center">
-                        <a class="btn  btn-xl btn-wire wire-btn-carmine-pink animDelay06 animated fadeInUp"
-                           onclick="scrollToTarget('#porfolio')">OUR PORTFOLIO</a>
+                    <div class="text-center animDelay08 animated fadeInUp">
+
+                        <!-- Begin MailChimp Signup Form -->
+                        <form action="//ssdbhub.us14.list-manage.com/subscribe/post?u=077856c342aee7f0b28568ae9&amp;id=365717b095"
+                              method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                              novalidate>
+                            <input type="text" style="position: absolute; left: -5000px;"
+                                   name="b_077856c342aee7f0b28568ae9_365717b095" tabindex="-1" value="">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" style="color: black;"
+                                   placeholder="email address" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                   class="btn btn-sm btn-wire wire-btn-carmine-pink">
+
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -84,333 +91,324 @@
     </div>
     <!-- header END -->
 
-    <!-- services -->
-    <div class="bloc l-bloc bgc-white" id="services">
-        <div class="container bloc-lg">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <span class="et-icon-picture icon-xl icon-carmine-pink animated zoomIn animDelay02"></span>
-                    </div>
-                    <h3 class="text-center mg-md ">
-                        Web Design
-                    </h3>
 
-                    <p class="text-center">
-                        A little feature description could go here. A little feature description.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <span class="et-icon-gears icon-xl icon-carmine-pink animated zoomIn"></span>
-                    </div>
-                    <h3 class="text-center mg-md ">
-                        Web Development
-                    </h3>
-
-                    <p class="text-center">
-                        A little feature description could go here. A little feature description.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <span class="et-icon-linegraph icon-xl icon-carmine-pink animated zoomIn animDelay02"></span>
-                    </div>
-                    <h3 class="text-center mg-md ">
-                        Promotion
-                    </h3>
-
-                    <p class="text-center">
-                        A little feature description could go here. A little feature description.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- services END -->
-
-    <!-- clients -->
-    <div class="bloc bgc-platinum l-bloc" id="bloc-3">
-        <div class="container bloc-lg">
-            <div class="row">
-                <div class="col-sm-3 text-center">
-                    <img src="img/ny-times.png" class="" alt="ny-times"/>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <img src="img/forbes.png" class="" alt="forbes"/>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <img src="img/wired.png" class="" alt="ny-wired"/>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <img src="img/guardian.png" class="" alt="guardian"/>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- clients END -->
-
-
-    <!-- team -->
-    <div class="bloc bgc-carmine-pink d-bloc" id="team">
-        <div class="container bloc-sm">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center mg-md ">
-                        Meet our team
-                    </h2>
-
-                    <p class="sub-heading text-center">
-                        We are a group of skilled individuals.
-                    </p>
-                </div>
-            </div>
-            <div class="row voffset-lg">
-                <div class="col-sm-3">
-
-                    <img src="img/adolf-zika-872335_640.jpg" class="img-responsive animated zoomIn" alt="member"/>
-                    <h3 class="text-center mg-md">
-                        JohnDoe
-                    </h3>
-
-                    <p class="text-center">
-                        Web Developer
-                    </p>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/castro-1080873_640.jpg" class="img-responsive animated zoomIn animDelay02"
-                         alt="member"/>
-
-                    <h3 class="text-center mg-md">
-                        Jane Doe
-                    </h3>
-
-                    <p class="text-center">
-                        Designer
-                    </p>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/woman-868571_640.jpg" class="img-responsive animDelay04 animated zoomIn"
-                         alt="member"/>
-
-                    <h3 class="text-center mg-md">
-                        Jane Doe
-                    </h3>
-
-                    <p class="text-center">
-                        Marketing manager
-                    </p>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/open-door-1156365_640.jpg" class="img-responsive animDelay06 animated zoomIn"
-                         alt="member"/>
-
-                    <h3 class="text-center mg-md">
-                        John Doe
-                    </h3>
-
-                    <p class="text-center">
-                        CEO
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- team END -->
-
-    <!-- testimonials -->
-    <div class="bloc bgc-white l-bloc" id="bloc-6">
-        <div class="container bloc-md">
-            <!--<div class="col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">-->
-            <!--<img src="img/bramk.jpg" class="img-responsive img-circle center-block img-frame-rd-md"/>-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-md-8 col-md-offset-2">-->
-            <!--<h3 class="text-center ">-->
-            <!--<i>"Eventually everything connects - people, ideas, objects. The quality of the connections is the-->
-            <!--key to quality per se."</i>-->
-            <!--</h3>-->
-
-            <!--<p class="text-center">-->
-            <!--<strong>Charles Eames</strong>-->
-            <!--</p>-->
-            <!--</div>-->
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
-                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-                            <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item">
-                                <div class="profile-circle">
-                                    <img src="img/bramk.jpg"
-                                         class="img-responsive img-circle center-block img-frame-rd-md" alt="member"/>
-                                </div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                        eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque
-                                        molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="item">
-                                <div class="profile-circle">
-                                    <img src="img/bramk.jpg"
-                                         class="img-responsive img-circle center-block img-frame-rd-md" alt="member"/>
-                                </div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                        eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque
-                                        molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                            <div class="active item">
-                                <div class="profile-circle">
-                                    <img src="img/bramk.jpg"
-                                         class="img-responsive img-circle center-block img-frame-rd-md" alt="member"/>
-                                </div>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                        eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque
-                                        molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonials END -->
-
-    <!-- Footer - quote -->
-    <div class="bloc bgc-carmine-pink d-bloc" id="quote">
+    <div class="bloc bgc-platinum" id="docs">
         <div class="container bloc-md">
             <div class="row">
-                <div class="col-sm-9">
-                    <h3 class="mg-md animated zoomIn">
-                        Don&rsquo;t hesitate to contact us now...
+                <div id="docs-content" class="col-sm-9">
+
+
+
+
+
+                    <script id='pp-cfp' data-env='beta'
+                            data-token='5f1dcf4a2baa201241870c626c59624e86acc87e06c9e86a971f90c895775d6d'>
+                        (function(d){var s=d.createElement('script'),c=d.createElement('link');s.src='https://beta.prodpad.com/static/js/prodpad-cfp.js';s.async=1;c.href='https://beta.prodpad.com/static/css/prodpad-cfp.css';c.rel='stylesheet';document.head.appendChild(c);document.head.appendChild(s);})(document);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- plans -->
+    <div class="bloc l-bloc bgc-white" id="plans">
+        <!--<div class="container bloc-lg">-->
+        <div class="container bloc-md">
+            <div class="row">
+
+                <div class="col-sm-3" style="opacity: 0.5">
+                    <h3 class="text-center mg-md ">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="pricing ui-ribbon-container"
+                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                <div class="title">
+                                    <h2 style="color: white;">Plan</h2>
+                                    <h1 style="color: white;">100 MB</h1>
+                                </div>
+                                <div class="x_content">
+                                    <div class="">
+                                        <div class="pricing_features">
+                                            <ul class="list-unstyled text-left">
+                                                <li><i class="fa fa-check text-success"></i><strong>FREE</strong>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i><strong>100 MB</strong>
+                                                    Storage <span style="color: red;"><strong>*</strong></span>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
+                                                    Traffic Quota
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> Limited Support
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> Backups
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> High Availability
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pricing_footer">
+                                        <div class="btn btn-block disabled"
+                                             style="background-color: #1ABB9C;color: #ffffff;"
+                                             role="button">Subscribe
+                                            <span> now!</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </h3>
+
                 </div>
-                <div class="col-sm-3 text-center">
-                    <a href="index.html" class="btn btn-lg wire-btn-white btn-wire animated zoomIn">GET A QUOTE NOW</a>
+                <!--</div>-->
+
+
+                <div class="col-sm-3">
+                    <h3 class="text-center mg-md ">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="pricing ui-ribbon-container"
+                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                <div class="ui-ribbon-wrapper">
+                                    <div class="ui-ribbon">
+                                        100% Off
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <h2 style="color: white;">Plan</h2>
+                                    <h1 style="color: white;">Alpha</h1>
+                                </div>
+                                <div class="x_content">
+                                    <div class="">
+                                        <div class="pricing_features">
+                                            <ul class="list-unstyled text-left">
+                                                <li><i class="fa fa-check text-success"></i> 3 Months
+                                                    <strong>FREE</strong>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> <strong>1 GB</strong>
+                                                    Storage <span style="color: red;"><strong>*</strong></span>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
+                                                    Traffic Quota
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> Special Attention and
+                                                    Support
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> Backups
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> Hight Availability
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pricing_footer">
+                                        <a href="javascript:window.scrollTo(0, 100);document.getElementById('mce-EMAIL').focus();"
+                                           class="btn btn-block" style="background-color: #1ABB9C;color: #ffffff;"
+                                           role="button">Subscribe
+                                            <span> now!</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+
+                </div>
+                <!--</div>-->
+
+
+                <div class="col-sm-3" style="opacity: 0.5">
+                    <h3 class="text-center mg-md ">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="pricing ui-ribbon-container"
+                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                <div class="title">
+                                    <h2 style="color: white;">Plan</h2>
+                                    <h1 style="color: white;">1 GB</h1>
+                                </div>
+                                <div class="x_content">
+                                    <div class="">
+                                        <div class="pricing_features">
+                                            <ul class="list-unstyled text-left">
+                                                <li><i class="fa fa-check text-success"></i> <strong>1 GB</strong>
+                                                    Storage <span style="color: red;"><strong>*</strong></span>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
+                                                    Traffic Quota
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> Dedicated Support
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> All time <strong>
+                                                    updates</strong></li>
+                                                <li><i class="fa fa-times text-danger"></i> Backups
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> High Availability
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pricing_footer">
+                                        <div class="btn btn-block disabled"
+                                             style="background-color: #1ABB9C;color: #ffffff;"
+                                             role="button">Subscribe
+                                            <span> now!</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+
+                </div>
+                <!--</div>-->
+
+
+                <div class="col-sm-3" style="opacity: 0.5">
+                    <h3 class="text-center mg-md ">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="pricing ui-ribbon-container"
+                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                <div class="title">
+                                    <h2 style="color: white;">Plan</h2>
+                                    <h1 style="color: white;">10 GB</h1>
+                                </div>
+                                <div class="x_content">
+                                    <div class="">
+                                        <div class="pricing_features">
+                                            <ul class="list-unstyled text-left">
+                                                <li><i class="fa fa-check text-success"></i> Custom Configuration
+                                                    provided
+                                                    on demand
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> Support
+                                                    <strong>24/7</strong>
+                                                </li>
+                                                <li><i class="fa fa-check text-success"></i> All time <strong>
+                                                    updates</strong></li>
+                                                <li><i class="fa fa-times text-danger"></i> Backupss
+                                                </li>
+                                                <li><i class="fa fa-times text-danger"></i> High Availability
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pricing_footer">
+                                        <div class="btn btn-block disabled"
+                                             style="background-color: #1ABB9C;color: #ffffff;"
+                                             role="button">Subscribe
+                                            <span> now!</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <p>
+            <div class="text-center">
+        <p>
+            <span style="color: red;"><strong>*</strong></span> We count the storage
+            size of <strong>compressed</strong> data. The actual size (uncompressed) of data might be by
+            1.5 - 4 times bigger.
+        </p>
+    </div>
+    </p>
+</div>
+<!-- services END -->
+
+
+<!-- Footer - quote -->
+<div class="bloc bgc-carmine-pink d-bloc" id="quote">
+    <div class="container bloc-md">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="mg-md animated zoomIn">
+                    Don&rsquo;t hesitate to contact us now...
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer - quote END -->
+
+<div class="bloc l-bloc" id="faq">
+    <div class="container bloc-lg">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center mg-md ">
+                    FAQ
+                </h2>
+
+                <p class="sub-heading text-center">
+                    Get Answers: Frequently Asked Questions
+                </p>
+            </div>
+        </div>
+        <div class="row voffset-mg">
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseOne" aria-expanded="false">This is a question #1</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-expanded="false"
+                             style="height: 0px;">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
+                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
+                                odio aut eius animi. Impedit temporibus nisi accusamus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseTwo" aria-expanded="false">This is a question #2</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
+                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
+                                odio aut eius animi. Impedit temporibus nisi accusamus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseThree" aria-expanded="false">This is a question #3</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                             aria-expanded="false">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
+                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
+                                odio aut eius animi. Impedit temporibus nisi accusamus.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer - quote END -->
+</div>
 
-    <div class="bloc l-bloc" id="faq">
-        <div class="container bloc-lg">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center mg-md ">
-                        FAQ
-                    </h2>
+<!-- ScrollToTop Button -->
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span
+        class="fa fa-chevron-up"></span></a>
+<!-- ScrollToTop Button END-->
 
-                    <p class="sub-heading text-center">
-                        Get Answers: Frequently Asked Questions
-                    </p>
-                </div>
-            </div>
-            <div class="row voffset-mg">
-                <div class="col-md-12">
-                    <div class="panel-group" id="accordion" role="tablist">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                       data-parent="#accordion"
-                                       href="#collapseOne" aria-expanded="false">This is a question #1</a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-expanded="false"
-                                 style="height: 0px;">
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                    eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                    odio aut eius animi. Impedit temporibus nisi accusamus.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                       data-parent="#accordion"
-                                       href="#collapseTwo" aria-expanded="false">This is a question #2</a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                    eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                    odio aut eius animi. Impedit temporibus nisi accusamus.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                       data-parent="#accordion"
-                                       href="#collapseThree" aria-expanded="false">This is a question #3</a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                                 aria-expanded="false">
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                    eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                    odio aut eius animi. Impedit temporibus nisi accusamus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- ScrollToTop Button -->
-    <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span
-            class="fa fa-chevron-up"></span></a>
-    <!-- ScrollToTop Button END-->
-
-    <!-- Footer - bloc-8 -->
-    <div class="bloc bgc-platinum l-bloc" id="bloc-8">
-        <div class="container bloc-sm">
-            <div class="row">
-                <div class="col-xs-12 col-md-8 col-md-offset-2">
-                    <div class="col-sm-3 text-center">
-                        <a class="social-lg" href="http://www.twitter.com/BootstrapOcean" target="_blank"><span
-                                class="fa fa-twitter icon-md icon-carmine-pink"></span></a>
-                    </div>
-                    <div class="col-sm-3 text-center">
-                        <a class="social-lg" href="https://www.facebook.com/BootstrapOcean" target="_blank"><span
-                                class="fa fa-facebook icon-md icon-carmine-pink"></span></a>
-                    </div>
-                    <div class="col-sm-3 text-center">
-                        <a class="social-lg"
-                           href="https://plus.google.com/b/116513433102470788789/116513433102470788789/posts"
-                           target="_blank"><span class="fa fa-google-plus icon-md icon-carmine-pink"></span></a>
-                    </div>
-                    <div class="col-sm-3 text-center">
-                        <a class="social-lg" href="#"><span class="fa fa-dribbble icon-md icon-carmine-pink"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center mg-md">Created by <a
-                href="http://www.bootstrapocean.com" target="_blank">BootstrapOcean</a></div>
-    </div>
-    <!-- Footer - bloc-8 END -->
 </div>
 <!-- Main container END -->
 </body>
@@ -418,5 +416,4 @@
 <!-- Google Analytics -->
 
 <!-- Google Analytics END -->
-
 </html>

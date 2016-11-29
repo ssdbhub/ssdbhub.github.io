@@ -200,18 +200,18 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 .navbar-brand{
 	height:auto;
-	padding:15px 15px;
+	padding:2px 2px;
 	font-size:25px!important;
 	font-weight:normal;
 	font-weight:600;
 }
 .navbar-brand img{
 	max-height: 200px;
-	margin: 0 5px 0 0;
+	margin: 0 0 0 0;
 	display:inline;
 }
 .navbar-brand{
-	padding: 15px 15px;
+	padding: 8px 2px 0px 0px;
 }
 .navbar .nav{
 	padding-top: 2px;
@@ -485,13 +485,115 @@ a[data-lightbox]:hover img{
 /* = Custom Colour Styling
 -------------------------------------------------------------- */
 
+
+/* *********  pricing  **************************** */
+.pricing {
+  background: #fff; }
+
+.pricing .title {
+  background: #1ABB9C;
+  height: 110px;
+  color: #fff;
+  padding: 15px 0 0;
+  text-align: center; }
+
+.pricing .title h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  font-weight: 400; }
+
+.pricing .title h1 {
+  font-size: 30px;
+  margin: 12px; }
+
+.pricing .title span {
+  background: rgba(51, 51, 51, 0.28);
+  padding: 2px 5px; }
+
+.pricing_features {
+  background: #FAFAFA;
+  padding: 20px 15px;
+  min-height: 230px;
+  font-size: 13.5px; }
+
+.pricing_features ul li {
+  margin-top: 10px; }
+
+.pricing_footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+.pricing_footer p {
+  font-size: 13px;
+  padding: 10px 0 2px;
+  display: block; }
+
+.ui-ribbon-container {
+  position: relative; }
+
+.ui-ribbon-container .ui-ribbon-wrapper {
+  position: absolute;
+  overflow: hidden;
+  width: 85px;
+  height: 88px;
+  top: -3px;
+  right: -3px; }
+
+.ui-ribbon-container.ui-ribbon-primary .ui-ribbon {
+  background-color: #5b90bf; }
+
+.ui-ribbon-container .ui-ribbon {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  transform: rotate(45deg);
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  line-height: 20px;
+  background-color: #EC971F;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+
+.ui-ribbon-container.ui-ribbon-primary .ui-ribbon:after, .ui-ribbon-container.ui-ribbon-primary .ui-ribbon:before {
+  border-top: 2px solid #5b90bf; }
+
+.ui-ribbon-container .ui-ribbon:before {
+  left: 0;
+  bottom: -1px; }
+
+.ui-ribbon-container .ui-ribbon:before {
+  right: 0; }
+
+.ui-ribbon-container .ui-ribbon:after, .ui-ribbon-container .ui-ribbon:before {
+  position: absolute;
+  content: " ";
+  line-height: 0;
+  border-top: 2px solid #555;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent; }
+
+/* *********  /pricing  **************************** */
+
+
+
+
 /* Background colour styles */
 
 .bgc-carmine-pink{
-	background-color:#F35342;
+	background-color:#12C29F;
 }
 .bgc-outer-space{
-	background-color:#47454B;
+	background-color:#2A3F54;
 }
 .bgc-white{
 	background-color:#ffffff;
@@ -502,7 +604,7 @@ a[data-lightbox]:hover img{
 /* Text colour styles */
 
 .tc-white{
-	color:#ffffff!important;
+	color:#E5E5E5!important;
 }
 /* Button colour styles */
 
@@ -517,8 +619,8 @@ a[data-lightbox]:hover img{
 /* Icon colour styles */
 
 .icon-carmine-pink{
-	color:#F35342!important;
-	border-color:#F35342!important;
+	color:#EC971F!important;
+	border-color:#EC971F!important;
 }
 .icon-outer-space{
 	color:#47454B!important;
@@ -667,9 +769,9 @@ a[data-lightbox]:hover img{
         box-shadow: none;
     }
     .navbar-brand img{
-        max-height: 40px;
+        max-height: 20px;
         width:auto;
-        margin: -10px 10px 0 0;    
+        margin: 0 0 0 0;
     }
     .nav-invert .navbar-header{
         float: none;
