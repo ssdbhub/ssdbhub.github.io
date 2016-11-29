@@ -20,6 +20,9 @@ configured and ready for use in the same application region.
 SSDBHub can be accessed via API; it supports users’ libraries in many languages 
 including Java, Python, Node.js, Ruby, PHP, and Go.
 
+
+# Heroku Platform
+
 ## Provisioning the add-on
 
 SSDBHub plugin can be attached to a Heroku application via the CLI:
