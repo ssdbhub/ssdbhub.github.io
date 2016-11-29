@@ -61,7 +61,7 @@ $ heroku config:get SSDB_URL
 http://172.217.18.14:32612
 
 $ heroku config:get SSDB_PASSWORD
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6InRlc3QifQ.KOUInB5Z2boEuKpz-3HzqWLCUAUSkUvnVMhrOpXf6fE
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6InRlc3QifQ..
 ```
 
 After installing SSDBHub the application should be configured to fully integrate with the add-on.
@@ -73,10 +73,10 @@ Some clients will require both of them separate, others will use full url as a c
 ### Environment setup
 
 After provisioning the add-on it's necessary to locally replicate the 
-config vars so your development environment can communicate with the service.
+config vars so your development environment operate against the service.
 
 Use the Heroku Local command-line tool to configure, run and manage process 
-types specified in your app's [Procfile](procfile). 
+types specified in your app's [Procfile](https://devcenter.heroku.com/articles/procfile).
 Heroku Local reads configuration variables from a `.env` file. 
 To view all of your app's config vars, type `heroku config`. 
 Use the following command for each value you want to add to your `.env` file.
@@ -91,7 +91,7 @@ $ heroku config:get SSDB_URL -s >> .env
 > warning
 > Credentials and other sensitive configuration values should not be committed to source-control. In Git exclude the `.env` file with: `echo .env >> .gitignore`.
 
-For more information, see [Heroku Local](heroku-local) article.
+For more information, see [Heroku Local](https://devcenter.heroku.com/articles/heroku-local) article.
 
 # Using SSDB with Different Languages:
 
@@ -116,7 +116,7 @@ be imported within the application.
 import com.udpwork.ssdb.*;
 ```
 
-Then create the client library using environment variables which were discussed 
+Then the client library should be created using environment variables, which were discussed 
 previously.
 
 ```java
@@ -133,6 +133,9 @@ returned in SSDB_PASSWORD configuration variable.
 ```java
 String pass = System.getenv("SSDB_PASSWORD");
 Response resp = ssdb.request("auth", pass);
+if(!resp.ok()){
+	resp.exception();
+}
 ```
 
 Now when client is authenticated it's ready to be used
@@ -156,7 +159,7 @@ ssdb.py | hit9 | [Repository](https://github.com/hit9/ssdb.py) | SSDB Python Cli
 
 
 For this example the ssdb-py client is use.
-Before using the package it should be installed.
+Before using the package it should be installed as follows:
 
 ```shell
 $ pip install ssdb
@@ -185,7 +188,9 @@ returned in SSDB_PASSWORD configuration variable.
 
 ```python 
 pass = os.env["SSDB_PASSWORD"];
-ssdb.execute_command("auth", pass);
+resp = ssdb.execute_command("auth", pass);
+if resp[0] != "ok":
+    raise Exception("Invalid Password")
 ```
 
 Now when client is authenticated it's ready to be used
@@ -520,13 +525,9 @@ Below is the list of supported Redis commands and how they map to SSDB.
 
 
 ## Dashboard
-![Alt text](https://s3.amazonaws.com/heroku-devcenter-files/article-images/1479256277-Screenshot-131116-15-44-13.png)
+<!--![Alt text](https://s3.amazonaws.com/heroku-devcenter-files/article-images/1480396320-Screenshot-291116-07-08-09.png)-->
 
-The SSDBHub dashboard allows you to monitor database usage, including 
-requests volumes, distribution for different method calls, 
-requests processing speeds as well as overall database size and plan usage. 
-
-All visualisations are represented according selected time period.
+The SSDBHub dashboard allows you to monitor overall plan usage. 
 
 The dashboard can be accessed via the CLI:
 
@@ -535,11 +536,12 @@ $ heroku addons:open ssdb
 Opening ssdb for sharp-mountain-4005
 ```
 
-or by visiting the [Heroku Dashboard](https://dashboard.heroku.com/apps) and selecting the application in question. Select SSDB from the Add-ons menu.
+or by visiting the [Heroku Dashboard](https://dashboard.heroku.com/apps) and selecting the application in question. 
+Select SSDB from the Add-ons menu.
 
 ## Troubleshooting
 
-In case of connection problems make sure you are using right credentials.
+In case of connection problems, please make sure you are using right credentials.
 They may be found in environment variables 
 
 `SSDB_HOST`
@@ -550,11 +552,7 @@ They may be found in environment variables
 
 `SSDB_PASSWORD` 
 
-which were discussed above.
-
-If you see empty graph visualisation and the message "No results found" 
-this is because SSDBHub was just created and there was no any calls made yet, or
-there was no any calls made within selected period of time.
+which were discussed previously.
 
 ## Migrating between plans
 
@@ -574,7 +572,7 @@ $ heroku addons:upgrade ssdb:newplan
 SSDBHub plugin can be removed via the CLI.
 
 > warning
-> This will destroy all associated data and cannot be undone!
+> This will destroy all associated data. The process is final and cannot be undone!
 
 ```term
 $ heroku addons:destroy ssdb
@@ -583,5 +581,5 @@ $ heroku addons:destroy ssdb
 
 ## Support
 
-All SSDBHub support and runtime issues should be submitted via one of the [Heroku Support channels](support-channels). 
-Any non-support related issues or product feedback is welcome at support@ssdbhub.com
+All SSDBHub support and runtime issues should be submitted via one of the [Heroku Support channels](https://devcenter.heroku.com/articles/support-channels). 
+Any non-support related issues or product feedback are welcome at feedback@ssdbhub.com
