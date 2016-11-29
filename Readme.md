@@ -29,8 +29,7 @@ Below there is the [list of supported Redis commands](#Key-Value) and how they m
 
 # Heroku Platform
 
-|Heroku SSDBHub add-on is currently at beta stage.|
-|---|
+* **Warning!** Heroku SSDBHub add-on is currently at beta stage.
 
 ## Provisioning the add-on
 
@@ -131,7 +130,7 @@ String port = System.getenv("SSDB_PORT");
 SSDB ssdb = new SSDB(host, Integer.parseInt(port));
 ```
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -186,7 +185,7 @@ port = os.env["SSDB_PORT"]
 ssdb = ssdb.SSDB(host, port)
 ```
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -228,7 +227,7 @@ var ssdb = require('ssdb');
 
 Then the connection pool should be created using environment variables.
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -281,7 +280,7 @@ import (
 
 Then the connection should be created using environment variables.
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -341,7 +340,7 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -382,7 +381,7 @@ require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
 
-* SSDBHub enforces authentication on SSDB instance. After the client is 
+SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
@@ -570,8 +569,7 @@ $ heroku addons:upgrade ssdb:newplan
 
 SSDBHub plugin can be removed via the CLI.
 
-|This will destroy all associated data. The process is final and cannot be undone!|
-|---|
+* **Warning!** This will destroy all associated data. The process is final and cannot be undone!
 
 ```term
 $ heroku addons:destroy ssdb
