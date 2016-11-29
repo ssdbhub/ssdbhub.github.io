@@ -15,12 +15,13 @@ Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
 SSDBHub provides one click solution for provisioning of SSDB node or cluster of nodes, 
 which may be accessed directly via SSDB or Reids clients.
-SSDB clients are available in many languages 
-including C++, C#, Java, Python, Node.js, Ruby, PHP and Go.
-Below there are basic code samples of how to use them for connecting, 
-authenticating and sending commands to SSDB.
-Furthermore it's possible to communicate with database using Redis clients.
-Below there is a list of supported Redis commands and how they map to SSDB.
+SSDB clients are available in many languages.
+Below there are basic code samples of how to use them for connecting to database, 
+authenticating the connection and sending the commands using follwing languages: 
+C++, C#, [Java](#Using-with-Java), [Python](#using-with-python), [Node.js](#using-with-node), 
+[Ruby](#using-with-ruby), [PHP](#Using-with-PHP) and [Go](#using-with-go).
+Furthermore it's possible to communicate with SSDB using Redis clients.
+Below there is the [list of supported Redis commands](#Key-Value) and how they map to SSDB.
 
 # Heroku Platform
 
