@@ -1,9 +1,6 @@
->warning
->The SSDBHub add-on is currently at beta stage
 
-[SSDBHub](https://elements.heroku.com/addons/ssdb) provides SSDB as a service.
-
-SSDB is a high performance NoSQL database. 
+We provide SSDB as a service.
+[SSDB](http://ssdb.io) is a high performance NoSQL database. 
 
 SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
 databases. SSDB database is not bound to RAM and is capable of storing significantly 
@@ -15,13 +12,13 @@ For example, QIHOO 360 has moved their Redis instances to SSDB to provide servic
 to hundreds millions of its users. 
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
-Adding [SSDBHub](https://elements.heroku.com/addons/ssdb) to any application will create SSDB cluster, which is already 
-configured and ready for use in the same application region. 
 SSDBHub can be accessed via API; it supports users’ libraries in many languages 
 including Java, Python, Node.js, Ruby, PHP, and Go.
 
 
 # Heroku Platform
+
+Heroku SSDBHub add-on is currently at beta stage, therefore the things in this section are not final and are subject to be changed.
 
 ## Provisioning the add-on
 
