@@ -12,22 +12,25 @@ For example, QIHOO 360 has moved their Redis instances to SSDB to provide servic
 to hundreds millions of its users. 
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
-SSDBHub can be accessed via API; it supports users’ libraries in many languages 
-including Java, Python, Node.js, Ruby, PHP, and Go.
-
+SSDBHub provides one click solution for provisioning of SSDB node or cluster of nodes,  
+which may be accessed directly via SSDB client. 
+There are plenty of them, available in many languages 
+including C++, C#, Java, Python, Node.js, Ruby, PHP and Go.
+Below there are basic code samples of how to connect, 
+authenticate and execute commands with those clients.
+Furthermore it's possible to communicate with database using Redis clients.
+Below there is a list of supported Redis commands and how they map to SSDB.
 
 # Heroku Platform
 
-<div class="alert alert-warning">
-  <strong>Warning!</strong> Heroku SSDBHub add-on is currently at beta stage, 
-  therehore the might be minor changes of functionality as well as of this document.
-</div>
+Warning! Heroku SSDBHub add-on is currently at beta stage, therefore 
+there might be minor changes in described functionality. If this happenes
+then the document will be updated accordingly.
 
 ## Provisioning the add-on
 
 SSDBHub plugin can be attached to a Heroku application via the CLI:
 
-> callout
 > [Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
 
 ```term 
