@@ -29,7 +29,7 @@ Below there is the [list of supported Redis commands](#Key-Value) and how they m
 
 # Heroku Platform
 
-Warning! Heroku SSDBHub add-on is currently at beta stage, therefore 
+* Heroku SSDBHub add-on is currently at beta stage, therefore 
 there might be minor changes in described functionality. If this happenes
 then the document will be updated accordingly.
 
@@ -37,7 +37,7 @@ then the document will be updated accordingly.
 
 SSDBHub plugin can be attached to a Heroku application via the CLI:
 
-> [Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
+[Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
 
 ```term 
 $ heroku addons:create ssdb
@@ -99,8 +99,8 @@ $ heroku config:get SSDB_PASSWORD -s  >> .env
 $ heroku config:get SSDB_URL -s >> .env
 ```
 
-> warning
-> Credentials and other sensitive configuration values should not be committed to source-control. In Git exclude the `.env` file with: `echo .env >> .gitignore`.
+* Credentials and other sensitive configuration values should not be committed to source-control. 
+In Git exclude the `.env` file with: `echo .env >> .gitignore`.
 
 For more information, see [Heroku Local](https://devcenter.heroku.com/articles/heroku-local) article.
 
@@ -560,8 +560,7 @@ which were discussed previously.
 
 ## Migrating between plans
 
-> note
-> Application owners should carefully manage the migration timing to ensure proper application function during the migration process.
+* Application owners should carefully manage the migration timing to ensure proper application function during the migration process.
 
 Use the `heroku addons:upgrade` command to migrate to a new plan.
 
@@ -575,8 +574,7 @@ $ heroku addons:upgrade ssdb:newplan
 
 SSDBHub plugin can be removed via the CLI.
 
-> warning
-> This will destroy all associated data. The process is final and cannot be undone!
+* This will destroy all associated data. The process is final and cannot be undone!
 
 ```term
 $ heroku addons:destroy ssdb
