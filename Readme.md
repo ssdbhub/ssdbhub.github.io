@@ -146,8 +146,8 @@ if(!resp.ok()){
 Now when client is authenticated it's ready to be used
 
 ```java
-ssdb.set("a", "123");
-byte[] val = ssdb.get("a");
+ssdb.set("mykey", "myvalue");
+byte[] val = ssdb.get("myvalue");
 ```
 
 
@@ -200,8 +200,8 @@ if resp[0] != "ok":
 Now when client is authenticated it's ready to be used
 
 ```python
-ssdb.set("a", "123");
-res = ssdb.get("a");
+ssdb.set("mykey", "myvalue");
+res = ssdb.get("mykey");
 ```
 
 ## Using with Node
@@ -312,8 +312,8 @@ func main() {
 Now when connection is created it's ready to be used.
  
 ```go
-    conn.Cmd("set", "test", "hello world")
-    if rs := conn.Cmd("get", "test"); rs.State == "ok" {
+    conn.Cmd("set", "mykey", "myvalue")
+    if rs := conn.Cmd("get", "mykey"); rs.State == "ok" {
         fmt.Println("get OK\n\t", rs.String())
     }
  }
@@ -352,11 +352,11 @@ ssdb.perform("auth", ENV['SSDB_PASSWORD'])
 Now when connection is created it's ready to be used.
 
 ```ruby
-ssdb.set("mykey", "hello world")
+ssdb.set("mykey", "myvalue")
 # => true
 
 ssdb.get("mykey")
-# => "hello world"
+# => "myvalue"
 ```
 
 
@@ -401,11 +401,11 @@ $ssdb->auth($password);
 Now when connection is created it's ready to be used.
 
 ```php
-$ssdb->set("mykey", "hello world")
+$ssdb->set("mykey", "myvalue")
 # => true
 
 echo $ssdb->get("mykey")
-# => "hello world"
+# => "myvalue"
 ```
 
 
