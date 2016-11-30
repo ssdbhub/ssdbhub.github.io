@@ -69,6 +69,8 @@
     };
   };
 
+  Flatdoc.file('http://ssdhub.com/js/highlight.pack.js')
+
   /**
    * Github fetcher.
    * Fetches from repo `repo` (in format 'user/repo').
@@ -447,6 +449,12 @@
     var fn = Flatdoc.highlighters[lang] || Flatdoc.highlighters.generic;
     return fn(code);
   };
+
+
+  Runner.prototype.highlight = function (code, value) {
+            return hljs.highlight(lang, code).value;
+          };
+
 
   /**
    * Loads the Markdown document (via the fetcher), parses it, and applies it

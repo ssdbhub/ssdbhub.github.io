@@ -15,7 +15,7 @@ to hundreds millions of its users.
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
 SSDBHub provides one click solution for provisioning of SSDB node (or cluster of nodes), 
-which may be accessed directly via SSDB or Reids clients.
+which may be accessed directly via SSDB or Redis clients.
 SSDB clients are available in many languages.
 Below there are basic code samples of how to use them for connecting to database, 
 authenticating the connection and sending the commands using following languages: 
