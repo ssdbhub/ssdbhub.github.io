@@ -370,33 +370,41 @@ built-in ★ | ideawu | [Repository](https://github.com/ideawu/ssdb/tree/master/
 
 Application will need to import the library
 
-```shell
-gem install ssdb
+```php
+include(dirname(__FILE__) . '/SSDB.php');
 ```
 
 Then create the connection using environment variables
 
-```ruby
+```php
 
-require "ssdb"
-ssdb = SSDB.new url: ENV['SSDB_URL']
+$host = getenv('SSDB_HOST');
+$port = getenv('SSDB_PORT');
+
+try{
+	$ssdb = new SimpleSSDB($host, $port);
+}catch(Exception $e){
+	die(__LINE__ . ' ' . $e->getMessage());
+}
+
 ```
 
 SSDBHub enforces authentication on SSDB instance. After the client is 
 created, it should be authenticated with the password which is
 returned in SSDB_PASSWORD configuration variable.
 
-```ruby
-ssdb.perform("auth", ENV['SSDB_PASSWORD'])
+```php
+$password = getenv('SSDB_PASSWORD');
+$ssdb->auth($password);
 ```
 
 Now when connection is created it's ready to be used.
 
-```ruby
-ssdb.set("mykey", "hello world")
+```php
+$ssdb->set("mykey", "hello world")
 # => true
 
-ssdb.get("mykey")
+echo $ssdb->get("mykey")
 # => "hello world"
 ```
 
