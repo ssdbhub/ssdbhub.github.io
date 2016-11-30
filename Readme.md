@@ -4,8 +4,9 @@ We provide [SSDB](http://ssdb.io) as a service.
 SSDB is a high performance NoSQL database.
 
 SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
-databases.SSDB database is not bound to RAM and is capable of storing significantly 
-(by 100 times) more data, compared to in-memory databases.
+databases. Besides the speed, SSDB has another important feature - it's not 
+bound to RAM and is capable of storing significantly 
+(by 100 times) more data, compared to other in-memory databases.
 
 Nowadays different companies are using SSDB in production for 
  high throughput, low-latency access to large data sets. 
@@ -13,11 +14,11 @@ For example, QIHOO 360 has moved their Redis instances to SSDB to provide servic
 to hundreds millions of its users. 
 Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
 
-SSDBHub provides one click solution for provisioning of SSDB node or cluster of nodes, 
+SSDBHub provides one click solution for provisioning of SSDB node (or cluster of nodes), 
 which may be accessed directly via SSDB or Reids clients.
 SSDB clients are available in many languages.
 Below there are basic code samples of how to use them for connecting to database, 
-authenticating the connection and sending the commands using follwing languages: 
+authenticating the connection and sending the commands using following languages: 
 C++, C#, [Java](#using-ssdb-with-different-languages-using-with-java), 
 [Python](#using-ssdb-with-different-languages-using-with-python), 
 [Node.js](#using-ssdb-with-different-languages-using-with-node), 
@@ -25,7 +26,7 @@ C++, C#, [Java](#using-ssdb-with-different-languages-using-with-java),
 [PHP](#using-ssdb-with-different-languages-using-with-php) and 
 [Go](#using-ssdb-with-different-languages-using-with-go).
 Furthermore it's possible to communicate with SSDB using Redis clients.
-Below there is the [list of supported Redis commands](#Key-Value) and how they map to SSDB.
+Below there is a [list of supported Redis commands](#Key-Value) and how they map to SSDB.
 
 # Heroku Platform
 

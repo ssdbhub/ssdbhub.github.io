@@ -770,7 +770,7 @@ a.big.button:hover:visited {
   }
 }
 .menubar {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .menu ul.level-1 > li + li {
   margin-top: 20px;
