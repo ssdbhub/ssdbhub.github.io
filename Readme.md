@@ -29,7 +29,7 @@ Below there is the [list of supported Redis commands](#Key-Value) and how they m
 
 # Heroku Platform
 
-* **Warning!** Heroku SSDBHub add-on is currently at beta stage.
+* **Warning!** Heroku SSDBHub add-on is currently at beta stage, therefore there might be changes to this document.
 
 ## Provisioning the add-on
 
@@ -365,7 +365,7 @@ Available clients
 
 Package | Author | Repository | Description
 --- | --- | --- | --- | 
-ssdb-rb | bsm | [Repository](https://github.com/bsm/ssdb-rb) | Ruby client library for SSDB 
+built-in ★ | ideawu | [Repository](https://github.com/ideawu/ssdb/tree/master/api/php) | This is the official client 
 
 Application will need to import the library
 
