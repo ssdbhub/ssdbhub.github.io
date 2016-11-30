@@ -69,8 +69,6 @@
     };
   };
 
-  Flatdoc.file('http://ssdhub.com/js/highlight.pack.js')
-
   /**
    * Github fetcher.
    * Fetches from repo `repo` (in format 'user/repo').
@@ -445,13 +443,16 @@
    *
    */
 
-  Runner.prototype.highlight = function(code, lang) {
-    var fn = Flatdoc.highlighters[lang] || Flatdoc.highlighters.generic;
-    return fn(code);
-  };
+//  Runner.prototype.highlight = function(code, lang) {
+//    var fn = Flatdoc.highlighters[lang] || Flatdoc.highlighters.generic;
+//    return fn(code);
+//  };
 
 
-  Runner.prototype.highlight = function (code, value) {
+  Runner.prototype.highlight = function (code, lang) {
+            if (lang=='term' || lang=='shell'){
+                lang='bash';
+            }
             return hljs.highlight(lang, code).value;
           };
 

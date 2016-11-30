@@ -38,7 +38,7 @@ SSDBHub plugin can be attached to a Heroku application via the CLI:
 
 [Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
 
-```term 
+```bash
 $ heroku addons:create ssdb
 -----> Adding ssdb to sharp-mountain-4005... done, v18 (free)
 ```
@@ -46,7 +46,7 @@ $ heroku addons:create ssdb
 Once SSDB is added to your app, the following variables will be added to environment 
 configuration:
  
-```shell
+```bash
 SSDB_HOST
 SSDB_PORT
 SSDB_URL
@@ -56,7 +56,7 @@ SSDB_PASSWORD
 These should be used to access the newly provisioned SSDB instance. 
 Configuration variables can be confirmed using the heroku config:get command.
 
-```term
+```bash
 $ heroku config:get SSDB_HOST
 172.217.18.14
 
@@ -87,7 +87,7 @@ Heroku Local reads configuration variables from a `.env` file.
 To view all of your app's config vars, type `heroku config`. 
 Use the following command for each value you want to add to your `.env` file.
 
-```term
+```bash
 $ heroku config:get SSDB_HOST -s  >> .env
 $ heroku config:get SSDB_PORT -s  >> .env
 $ heroku config:get SSDB_PASSWORD -s  >> .env
@@ -166,7 +166,7 @@ ssdb.py | hit9 | [Repository](https://github.com/hit9/ssdb.py) | SSDB Python Cli
 For this example the ssdb-py client is use.
 Before using the package it should be installed as follows:
 
-```shell
+```bash
 $ pip install ssdb
 ```
 
@@ -216,7 +216,7 @@ node-ssdb by @hit9 | hit9 | [Repository](https://github.com/eleme/node-ssdb) | n
 For this example the node-ssdb library is use.
 Before using the package it should be installed 
 
-```shell
+```bash
 $ npm install ssdb
 ```
 
@@ -312,8 +312,8 @@ func main() {
 Now when connection is created it's ready to be used.
  
 ```go
-    conn.Cmd("set", "aa", "val-aaaaaaaaaaaaaaaaaa")
-    if rs := conn.Cmd("get", "aa"); rs.State == "ok" {
+    conn.Cmd("set", "test", "hello world")
+    if rs := conn.Cmd("get", "test"); rs.State == "ok" {
         fmt.Println("get OK\n\t", rs.String())
     }
  }
@@ -330,7 +330,7 @@ ssdb-rb | bsm | [Repository](https://github.com/bsm/ssdb-rb) | Ruby client libra
 
 Application will need to import the library
 
-```shell
+```bash
 gem install ssdb
 ```
 
@@ -539,7 +539,7 @@ The SSDBHub dashboard allows you to monitor overall plan usage.
 
 The dashboard can be accessed via the CLI:
 
-```term
+```bash
 $ heroku addons:open ssdb
 Opening ssdb for sharp-mountain-4005
 ```
@@ -552,7 +552,7 @@ Select SSDB from the Add-ons menu.
 In case of connection problems, please make sure you are using right credentials.
 They may be found in environment variables 
 
-```shell
+```bash
 SSDB_HOST
 SSDB_PORT
 SSDB_URL
@@ -568,7 +568,7 @@ proper application function during the migration process.
 
 Use the `heroku addons:upgrade` command to migrate to a new plan.
 
-```term
+```bash
 $ heroku addons:upgrade ssdb:newplan
 -----> Upgrading ssdb:newplan to sharp-mountain-4005... done, v18 ($49/mo)
        Your plan has been updated to: ssdb:newplan
@@ -580,7 +580,7 @@ SSDBHub plugin can be removed via the CLI.
 
 * **Warning!** This will destroy all associated data. The process is final and cannot be undone!
 
-```term
+```bash
 $ heroku addons:destroy ssdb
 -----> Removing ssdb from sharp-mountain-4005... done, v20 (free)
 ```
