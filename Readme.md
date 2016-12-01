@@ -32,7 +32,7 @@ Below there is a [list of supported Redis commands](#Key-Value) and how they map
 
 * **Warning!** Heroku SSDBHub add-on is currently at beta stage, therefore there might be changes to this document.
 
-## Provisioning the add-on
+## Provisioning add-on
 
 SSDBHub plugin can be attached to a Heroku application via the CLI:
 
