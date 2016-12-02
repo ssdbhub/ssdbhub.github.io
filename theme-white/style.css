@@ -113,7 +113,6 @@ body,
 td,
 textarea,
 input {
-  font-family: Helvetica Neue, Open Sans, sans-serif;
   line-height: 1.6;
   font-size: 13px;
   color: #505050;
@@ -266,7 +265,7 @@ a:hover {
   position: relative;
 }
 .content {
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
@@ -594,10 +593,12 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   background: #1B2835;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
   border-bottom: solid 1px #dfe2e7;
-  padding: 15px 15px 15px 30px;
+  padding: 5px 5px 5px 30px;
   zoom: 1;
   line-height: 20px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .header:before,
 .header:after {
@@ -614,7 +615,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-align: right;
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 5px;
 }
 .header .right iframe {
   display: inline-block;
@@ -625,7 +626,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-rendering: optimizeLegibility;
   font-weight: bold;
   font-family: montserrat, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 .header h1,
 .header h1 a,
@@ -643,7 +644,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 .header li a:hover {
   color: #3a3a44;
 }
-@media (min-width: 480px) {
+@media (min-width: 200px) {
   .header h1 {
     float: left;
   }
@@ -680,7 +681,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-rendering: optimizeLegibility;
 }
 .menubar .section {
-  padding: 30px 30px;
+  padding: 50px 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

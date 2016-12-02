@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-    <!--<link rel="stylesheet" type="text/css" href="./css/custom.css">-->
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" href="./css/animate.css"/>
     <script src="./js/jquery-2.1.0.js"></script>
@@ -21,79 +20,34 @@
           type='text/css'>
 
     <title>SSDBHub</title>
+    <style>
+        .fluidMedia {
+            position: relative;
+            padding-top: 30px;
+            height: 20;
+            overflow: hidden;
+        }
+
+        .fluidMedia iframe {
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
 </head>
 
 
+<div class="fluidMedia">
+    <iframe src="header.html"></iframe>
+</div>
+
 <!-- Main container -->
 <div class="page-container">
-    <div class="navbar navbar-fixed-top" style="padding: 15px 15px 15px 30px;
-zoom: 1;
-line-height: 20px;
-position: relative;">
-      <h1 style="margin: 0;
-padding-top: 2px;
-border: 0;
-outline: 0;
-font-weight: inherit;
-font-style: inherit;
-font-family: inherit;
-font-size: 100%;
-vertical-align: baseline;"><a href="http://ssdbhub.com"><img src="img/ssdb_with_text_small_logo.png" height="18"></a></h1>
-    <div class="right">
-
-
-                <div class="collapse navbar-collapse navbar-1">
-                    <ul class="site-navigation nav navbar-nav">
-                        <li>
-                            <a href="documentation.html" style="color: #9090aa; font-size:0.88em;">Documentation</a>
-                        </li>
-                        <li>
-                            <a onclick="scrollToTarget('#plans')" style="color: #9090aa; font-size:0.88em;">Plans</a>
-                        </li>
-                        <li>
-                            <a onclick="scrollToTarget('#faq')" style="color: #9090aa; font-size:0.88em;">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/ssdbhub/ssdbhub.github.io/issues/new"
-                               style="color: #9090aa; font-size:0.88em;" target="_blank"> Report
-                                Issue</a>
-                        </li>
-                    </ul>
-                </div>
-
-    </div>
-  </div>
-
-
-    <!--<div class="navbar bgc-carmine-pink d-bloc navbar-fixed-top" id="nav-bloc">-->
-        <!--<div class="container">-->
-            <!--<nav class="navbar row">-->
-                <!--<div class="navbar-header">-->
-                    <!--<a class="navbar-brand" href="index.html">-->
-                        <!--<img src="img/ssdb_with_text_small_logo.png" style="padding-top: 6px" height="25">-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="collapse navbar-collapse navbar-1">-->
-                    <!--<ul class="site-navigation nav navbar-nav">-->
-                        <!--<li>-->
-                            <!--<a href="documentation.html">Documentation</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a onclick="scrollToTarget('#plans')">Plans</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a onclick="scrollToTarget('#faq')">FAQ</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="https://github.com/ssdbhub/ssdbhub.github.io/issues/new" target="_blank"> Report-->
-                                <!--Issue</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</nav>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; Navigation Bloc END &ndash;&gt;-->
 
     <!-- header -->
     <div class="bloc bgc-outer-space bg-city-overlay d-bloc" id="header">
@@ -105,10 +59,10 @@ vertical-align: baseline;"><a href="http://ssdbhub.com"><img src="img/ssdb_with_
                         <span style="color: #EC971F;">SSDB</span><span style="color: #666464;">Hub</span>
                     </h3>
                     <h2 class="text-center mg-lg animated fadeInUp animDelay01">We are launching soon at
-                        <img src="img/heroku.png" hight="32px" width="32px">HEROKU</h2>
+                        <img src="img/heroku.png" height="32px" width="32px">HEROKU</h2>
 
                     <div class="text-center mg-sm animDelay08 animated fadeInUp">
-                        Jump right in to become an alpha user.
+                        Subscribe to get your FREE access to SSDB cluster.
                     </div>
 
                     <div class="text-center animDelay08 animated fadeInUp">
@@ -119,312 +73,199 @@ vertical-align: baseline;"><a href="http://ssdbhub.com"><img src="img/ssdb_with_
                               novalidate>
                             <input type="text" style="position: absolute; left: -5000px;"
                                    name="b_077856c342aee7f0b28568ae9_365717b095" tabindex="-1" value="">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" style="color: black;"
-                                   placeholder="email address" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                   class="btn btn-sm btn-wire wire-btn-carmine-pink">
-
+                            <div class="row">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                       style="color: black;"
+                                       placeholder="email address" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                       class="btn btn-sm btn-wire wire-btn-carmine-pink" style="margin:0;">
+                            </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- header END -->
+</div>
 
-    <!-- plans -->
-    <div class="bloc l-bloc bgc-white" id="plans">
-        <!--<div class="container bloc-lg">-->
-        <div class="container bloc-md">
-            <div class="row">
-                <div class="col-sm-3" style="opacity: 0.5">
-                    <h3 class="text-center mg-md ">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="pricing ui-ribbon-container"
-                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                                <div class="title">
-                                    <h2 style="color: white;">Plan</h2>
-                                    <h1 style="color: white;">100 MB</h1>
-                                </div>
-                                <div class="x_content">
-                                    <div class="">
-                                        <div class="pricing_features">
-                                            <ul class="list-unstyled text-left">
-                                                <li><i class="fa fa-check text-success"></i><strong>FREE</strong>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i><strong>100 MB</strong>
-                                                    Storage <span style="color: red;"><strong>*</strong></span>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
-                                                    Traffic Quota
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> Limited Support
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> Backups
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> High Availability
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pricing_footer">
-                                        <div class="btn btn-block disabled"
-                                             style="background-color: #1ABB9C;color: #ffffff;"
-                                             role="button">Subscribe
-                                            <span> now!</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </h3>
+<!-- plans -->
+<div class="bloc l-bloc bgc-white" id="why">
+    <div class="container bloc-md">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bs-callout bs-callout-warning">
+                    <h4>Why SSDB ?</h4>
+                    <ul>
+                        <li>
+                            <strong>SSDB is a high performance NoSQL database,</strong>
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                used by many companies for high throughput, <br>
+                                low-latency operations on large data sets.
+                            </p>
+                        </li>
 
-                </div>
-                <!--</div>-->
-
-
-                <div class="col-sm-3">
-                    <h3 class="text-center mg-md ">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="pricing ui-ribbon-container"
-                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                                <div class="ui-ribbon-wrapper">
-                                    <div class="ui-ribbon">
-                                        100% Off
-                                    </div>
-                                </div>
-                                <div class="title">
-                                    <h2 style="color: white;">Plan</h2>
-                                    <h1 style="color: white;">Alpha</h1>
-                                </div>
-                                <div class="x_content">
-                                    <div class="">
-                                        <div class="pricing_features">
-                                            <ul class="list-unstyled text-left">
-                                                <li><i class="fa fa-check text-success"></i> 3 Months
-                                                    <strong>FREE</strong>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> <strong>1 GB</strong>
-                                                    Storage <span style="color: red;"><strong>*</strong></span>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
-                                                    Traffic Quota
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> Special Attention and
-                                                    Support
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> Backups
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> Hight Availability
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pricing_footer">
-                                        <a href="javascript:window.scrollTo(0, 100);document.getElementById('mce-EMAIL').focus();"
-                                           class="btn btn-block" style="background-color: #1ABB9C;color: #ffffff;"
-                                           role="button">Subscribe
-                                            <span> now!</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </h3>
-
-                </div>
-                <!--</div>-->
-
-
-                <div class="col-sm-3" style="opacity: 0.5">
-                    <h3 class="text-center mg-md ">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="pricing ui-ribbon-container"
-                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                                <div class="title">
-                                    <h2 style="color: white;">Plan</h2>
-                                    <h1 style="color: white;">1 GB</h1>
-                                </div>
-                                <div class="x_content">
-                                    <div class="">
-                                        <div class="pricing_features">
-                                            <ul class="list-unstyled text-left">
-                                                <li><i class="fa fa-check text-success"></i> <strong>1 GB</strong>
-                                                    Storage <span style="color: red;"><strong>*</strong></span>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> <strong> Unlimited</strong>
-                                                    Traffic Quota
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> Dedicated Support
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> All time <strong>
-                                                    updates</strong></li>
-                                                <li><i class="fa fa-times text-danger"></i> Backups
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> High Availability
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pricing_footer">
-                                        <div class="btn btn-block disabled"
-                                             style="background-color: #1ABB9C;color: #ffffff;"
-                                             role="button">Subscribe
-                                            <span> now!</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </h3>
-
-                </div>
-                <!--</div>-->
-
-
-                <div class="col-sm-3" style="opacity: 0.5">
-                    <h3 class="text-center mg-md ">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="pricing ui-ribbon-container"
-                                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                                <div class="title">
-                                    <h2 style="color: white;">Plan</h2>
-                                    <h1 style="color: white;">10 GB</h1>
-                                </div>
-                                <div class="x_content">
-                                    <div class="">
-                                        <div class="pricing_features">
-                                            <ul class="list-unstyled text-left">
-                                                <li><i class="fa fa-check text-success"></i> Custom Configuration
-                                                    provided
-                                                    on demand
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> Support
-                                                    <strong>24/7</strong>
-                                                </li>
-                                                <li><i class="fa fa-check text-success"></i> All time <strong>
-                                                    updates</strong></li>
-                                                <li><i class="fa fa-times text-danger"></i> Backupss
-                                                </li>
-                                                <li><i class="fa fa-times text-danger"></i> High Availability
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pricing_footer">
-                                        <div class="btn btn-block disabled"
-                                             style="background-color: #1ABB9C;color: #ffffff;"
-                                             role="button">Subscribe
-                                            <span> now!</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </h3>
-
+                        <li>
+                            <strong>Lightening fast</strong> as todays fastest in-memory solutions
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                Query processing times are measured in microseconds (10<sup>-6</sup> sec).
+                            </p>
+                        </li>
+                        <li>
+                            <strong>More data</strong> can be stored
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                Compared to others, SSDB has a principal advantage - it's
+                                not limited with RAM.
+                                <br>
+                                It's capable of storing significantly (by 100 times) more
+                                data.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>No more hybrid solutions</strong> like Redis + MongoDB
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                SSDB brings you the speed and capacity alltogether.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Redis protocol is supported</strong>
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                If you are already using Redis you can easily switch to SSDB.
+                                <br><a
+                                    href="http://localhost:63342/ssdbhub.github.io/documentation.html#using-ssdb-with-different-languages-using-with-redis-clients">
+                                Read More..
+                            </a>
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
+            <div class="col-md-6">
+                <div class="bs-callout bs-callout-warning">
+                    <h4>Why SSDBHub ?</h4>
+                    <ul>
+                        <li>
+                            <strong>We provide one click solution</strong> for provisioning of SSDB cluster
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                It's enterprise-ready, highly available and configured for best performance.
+                            </p>
+                        </li>
+                        <li><strong>We give the best Value For Money</strong>
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                We efficiently utilize costly volatile memory with inexpensive disk storage.
+                                Our pricing plans are derived from the size of used storage.
+                                We count only compressed data size,
+                                which means the actual size of uncompressed data might be 1.5 - 4 times bigger.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>We like to grow with you</strong>
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                We have a <strong>Lifetime Free Plan</strong> to start with. While growing you can
+                                always upgrade to bigger plan.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Dedicated and Public support</strong>
+                            <p style='color: #2BADAD;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif'>
+                                We are doing our best to provide support for our customers.
+                                We have an email support available at
+                                <a href="mailto:support@ssdbhub.com">support@ssdbhub.com</a> as well as a public
+                                <a href="https://github.com/ssdbhub/ssdbhub.github.io/issues">Issue Tracker</a> at
+                                GitHub where you can share the issue with us and other customers.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-
-        <p>
-            <div class="text-center">
-        <p>
-            <span style="color: red;"><strong>*</strong></span> We count the storage
-            size of <strong>compressed</strong> data. The actual size (uncompressed) of data might be by
-            1.5 - 4 times bigger.
-        </p>
     </div>
-    </p>
 </div>
 <!-- services END -->
 
-
-<!-- Footer - quote -->
-<div class="bloc bgc-carmine-pink d-bloc" id="quote">
-    <div class="container bloc-md">
-        <div class="row">
-            <div class="col-sm-9">
-                <h3 class="mg-md animated zoomIn">
-                    Don&rsquo;t hesitate to contact us now...
+<div class="row">
+    <div class="bloc l-bloc bgc-outer-space" style="float: none; margin: 0 auto;" id="plans">
+        <div class="container bloc-md">
+            <div class="col-sm-4 col-md-offset-4">
+                <h3 class="text-center mg-md ">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="pricing ui-ribbon-container"
+                             style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                            <div class="ui-ribbon-wrapper">
+                                <div class="ui-ribbon">
+                                    100% Off
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h2 style="color: white;">Plan</h2>
+                                <h1 style="color: white;">Free</h1>
+                            </div>
+                            <div class="x_content">
+                                <div class="pricing_features">
+                                    <ul class="list-unstyled text-left">
+                                        <li><i class="fa fa-check text-success"></i>
+                                            <strong>Lifetime FREE</strong>
+                                        </li>
+                                        <li><i class="fa fa-check text-success"></i> <strong>30 Mb</strong>
+                                            Storage <span style="color: red;"><strong>*</strong></span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check text-success"></i> One SSDB node
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check text-success"></i> <strong>us-east-1</strong> Heroku
+                                            region
+                                        </li>
+                                        <li><i class="fa fa-check text-success"></i> Public Support at our
+                                            <a href="https://github.com/ssdbhub/ssdbhub.github.io/issues"> Issue
+                                                Tracker</a>
+                                        </li>
+                                        <li><i class="fa fa-times text-danger"></i> Dedicated Support
+                                        </li>
+                                        <li><i class="fa fa-times text-danger"></i> Backups
+                                        </li>
+                                        <li><i class="fa fa-times text-danger"></i> High Availability
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pricing_footer">
+                                    <a href="javascript:window.scrollTo(0, 100);document.getElementById('mce-EMAIL').focus();"
+                                       class="btn btn-block" style="background-color: #1ABB9C;color: #ffffff;"
+                                       role="button">Subscribe
+                                        <span> now!</span></a>
+                                </div>
+                                <div style="font-size: 13.5px;background: #FAFAFA; padding: 20px 15px;">
+                                    <span style="color: red;"><strong>*</strong></span>
+                                    The actual data size might be
+                                    bigger by 1.5 - 4 times.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </h3>
             </div>
         </div>
     </div>
 </div>
-<!-- Footer - quote END -->
-
-<div class="bloc l-bloc" id="faq">
-    <div class="container bloc-lg">
+<!-- Footer - quote -->
+<div class="bloc bgc-carmine-pink d-bloc" id="quote">
+    <div class="container bloc-md">
         <div class="row">
-            <div class="col-sm-12">
-                <h2 class="text-center mg-md ">
-                    FAQ
-                </h2>
-
-                <p class="sub-heading text-center">
-                    Get Answers: Frequently Asked Questions
-                </p>
-            </div>
-        </div>
-        <div class="row voffset-mg">
-            <div class="col-md-12">
-                <div class="panel-group" id="accordion" role="tablist">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                   data-parent="#accordion"
-                                   href="#collapseOne" aria-expanded="false">This is a question #1</a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-expanded="false"
-                             style="height: 0px;">
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                odio aut eius animi. Impedit temporibus nisi accusamus.
-                            </div>
-                        </div>
+            <div class="col-sm-9">
+                <h3 class="mg-md" style="text-shadow: 2px 2px 4px #000000;">
+                    Don't hesitate to contact us now...
+                </h3>
+                <a href="mailto: support@ssdbhub.com">support@ssdbhub.com</a><br>
+                <a href="https://github.com/ssdbhub/ssdbhub.github.io/issues">Our Issue Tracker</a>
+                    <div class="box">
+                        <p>© 2016 ssdbhub. All rights reserved.</p>
+                        <p><a href="company/privacy.html">Privacy</a> <a href="company/terms.html">Terms</a></p>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                   data-parent="#accordion"
-                                   href="#collapseTwo" aria-expanded="false">This is a question #2</a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                odio aut eius animi. Impedit temporibus nisi accusamus.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                   data-parent="#accordion"
-                                   href="#collapseThree" aria-expanded="false">This is a question #3</a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                             aria-expanded="false">
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla
-                                eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias
-                                odio aut eius animi. Impedit temporibus nisi accusamus.
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Footer - quote END -->
 
 <!-- ScrollToTop Button -->
 <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span
