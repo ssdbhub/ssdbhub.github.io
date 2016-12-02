@@ -12,6 +12,7 @@ being bound to RAM it's capable of storing significantly (by 100 times) more
 data.
 
 No more hybrid solutions like Redis + MongoDB.
+
 SSDB brings you the speed and capacity alltogether.
 
 SSDBHub provides one click solution for provisioning of SSDB node (or cluster of nodes), 
@@ -19,13 +20,17 @@ which may be accessed directly via SSDB or Redis clients.
 SSDB clients are available in many languages.
 Below there are basic code samples of how to use them for connecting to database, 
 authenticating the connection and sending the commands using following languages: 
-C++, C#, [Java](#using-ssdb-with-different-languages-using-with-java), 
+
+C++, 
+C#, 
+[Java](#using-ssdb-with-different-languages-using-with-java), 
 [Python](#using-ssdb-with-different-languages-using-with-python), 
 [Node.js](#using-ssdb-with-different-languages-using-with-node), 
 [Ruby](#using-ssdb-with-different-languages-using-with-ruby), 
-[PHP](#using-ssdb-with-different-languages-using-with-php) and 
+[PHP](#using-ssdb-with-different-languages-using-with-php),
 [Go](#using-ssdb-with-different-languages-using-with-go).
-Furthermore it's possible to communicate with SSDB using Redis clients.
+
+As mentioned above, it's possible to communicate with SSDB using Redis clients.
 Below there is a [list of supported Redis commands](#Key-Value) and how they map to SSDB.
 
 # Heroku Platform
