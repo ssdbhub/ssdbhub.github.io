@@ -3,16 +3,16 @@ We provide [SSDB](http://ssdb.io) as a service.
 
 SSDB is a high performance NoSQL database.
 
-SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
-databases. Besides the speed, SSDB has another important feature - it's not 
-bound to RAM and is capable of storing significantly 
-(by 100 times) more data, compared to other in-memory databases.
+It's allready used by many companies for high throughput, low-latency operations on large data
+sets.
 
-Nowadays different companies are using SSDB in production for 
- high throughput, low-latency access to large data sets. 
-For example, QIHOO 360 has moved their Redis instances to SSDB to provide services 
-to hundreds millions of its users. 
-Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
+SSDB is fast as today’s best in-memory databases.
+But, compared to others, it has a principal advantage - not
+being bound to RAM it's capable of storing significantly (by 100 times) more
+data.
+
+No more hybrid solutions like Redis + MongoDB.
+SSDB brings you the speed and capacity alltogether.
 
 SSDBHub provides one click solution for provisioning of SSDB node (or cluster of nodes), 
 which may be accessed directly via SSDB or Redis clients.
