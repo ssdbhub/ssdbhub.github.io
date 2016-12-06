@@ -8,18 +8,19 @@ sets.
 
 SSDB is fast as today’s best in-memory databases.
 But, compared to others, it has a principal advantage - not
-being bound to RAM it's capable of storing significantly (by 100 times) more
+being memory bound it's capable of storing significantly (by 100 times) more
 data.
 
 No more hybrid solutions like Redis + MongoDB.
+SSDB brings you the speed and capacity all in one.
 
-SSDB brings you the speed and capacity alltogether.
-
-SSDBHub provides one click solution for provisioning of SSDB node (or cluster of nodes), 
+SSDBHub provides one click solution for provisioning of highly available SSDB cluster, 
 which may be accessed directly via SSDB or Redis clients.
+
 SSDB clients are available in many languages.
-Below there are basic code samples of how to use them for connecting to database, 
-authenticating the connection and sending the commands using following languages: 
+Below there are basic code samples of how to connect to database, 
+authenticate the connection and start to send commands 
+to SSDB using the following languages: 
 
 C++, 
 C#, 
@@ -59,7 +60,7 @@ SSDB_PASSWORD
 ```
    
 These should be used to access the newly provisioned SSDB instance. 
-Configuration variables can be confirmed using the heroku config:get command.
+Configuration variables can be confirmed using the heroku `config:get` command.
 
 ```bash
 $ heroku config:get SSDB_HOST

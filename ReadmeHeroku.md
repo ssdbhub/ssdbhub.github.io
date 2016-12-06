@@ -1,58 +1,37 @@
->warning
->SSDBHub plugin is currently at beta stage, therefore 
-there might be minor changes in described functionality. If this happenes
-then the document will be updated accordingly.
+Adding [ssdb](https://elements.heroku.com/addons/ssdb) addon to application 
+will provide you with access to SSDBHub - highly available ssdb cluster, 
+configured and ready for use. 
+The cluster can be accessed directly with SSDB or Redis client. 
 
-[SSDBHub](https://elements.heroku.com/addons/ssdb) provides SSDB as a service.
-
-SSDB is a high performance NoSQL database. 
-
-SSDB is based on Google’s LevelDB and is fast as today’s best in-memory 
-databases. SSDB database is not bound to RAM and is capable of storing significantly 
-(by 100 times) more data, compared to in-memory datavases.
-
-Nowadays different companies are using SSDB in production for 
- high throughput, low-latency access to large data sets. 
-For example, QIHOO 360 has moved their Redis instances to SSDB to provide services 
-to hundreds millions of its users. 
-Whereas Chinese largest search engine Baidu is using SSDB for its search engine.
-
-Adding [SSDBHub](https://elements.heroku.com/addons/ssdb) to any application will create SSDB cluster, which is already 
-configured and ready for use in the same application region. 
-SSDBHub can be accessed via API; it supports users’ libraries in many languages 
+SSDBHub supports users libraries in many languages.
 including Java, Python, Node.js, Ruby, PHP, and Go.
 
 ## Provisioning the add-on
 
-SSDBHub plugin can be attached to a Heroku application via the CLI:
+`ssdb` plugin can be attached to a Heroku application via the CLI:
 
 > callout
 > [Here](https://elements.heroku.com/addons/ssdb) the list of all available plans.
 
-```term 
+```bash 
 $ heroku addons:create ssdb
 -----> Adding ssdb to sharp-mountain-4005... done, v18 (free)
 ```
 
-Once SSDB has been added the following settings will be available in the app configuration:
+Once `ssdb` is added to your app, the following variables will be added to environment 
+configuration:
  
-   `SSDB_HOST`
+```bash
+SSDB_HOST
+SSDB_PORT
+SSDB_URL
+SSDB_PASSWORD
+```
    
-   `SSDB_PORT`
-   
-   `SSDB_PASSWORD`
-   
-   `SSDB_URL`
-   
-which should be used to access the newly provisioned SSDB instance.
-This can be confirmed using the `heroku config:get` command.
-
-Once SSDB is added to your app the following settings will appear in the app 
-configuration: SSDB_HOST SSDB_PORT SSDB_PASSWORD. These should be used to 
-access the newly provisioned SSDB instance. 
+These should be used to access the newly provisioned SSDB instance. 
 Configuration variables can be confirmed using the heroku config:get command.
 
-```term
+```bash
 $ heroku config:get SSDB_HOST
 172.217.18.14
 
@@ -66,7 +45,7 @@ $ heroku config:get SSDB_PASSWORD
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6InRlc3QifQ..
 ```
 
-After installing SSDBHub the application should be configured to fully integrate with the add-on.
+After installing `ssdb` the application should be configured to fully integrate with the add-on.
 Please note that SSDB_URL is only the combination of SSDB_HOST and SSDB_PORT.
 Some clients will require both of them separate, others will use full url as a connection string.
 
@@ -83,7 +62,7 @@ Heroku Local reads configuration variables from a `.env` file.
 To view all of your app's config vars, type `heroku config`. 
 Use the following command for each value you want to add to your `.env` file.
 
-```term
+```bash
 $ heroku config:get SSDB_HOST -s  >> .env
 $ heroku config:get SSDB_PORT -s  >> .env
 $ heroku config:get SSDB_PASSWORD -s  >> .env
@@ -91,11 +70,12 @@ $ heroku config:get SSDB_URL -s >> .env
 ```
 
 > warning
-> Credentials and other sensitive configuration values should not be committed to source-control. In Git exclude the `.env` file with: `echo .env >> .gitignore`.
+> Credentials and other sensitive configuration values should not be 
+committed to source-control. In Git exclude the `.env` file with: `echo .env >> .gitignore`.
 
 For more information, see [Heroku Local](https://devcenter.heroku.com/articles/heroku-local) article.
 
-# Using SSDB with Different Languages:
+# Using SSDB with Different Languages
 
 As already mentioned above SSDB has many client libraries in different programming languages. 
 Below are couple of examples on how you can apply them. 
@@ -143,8 +123,8 @@ if(!resp.ok()){
 Now when client is authenticated it's ready to be used
 
 ```java
-ssdb.set("a", "123");
-byte[] val = ssdb.get("a");
+ssdb.set("mykey", "myvalue");
+byte[] val = ssdb.get("myvalue");
 ```
 
 
@@ -163,7 +143,7 @@ ssdb.py | hit9 | [Repository](https://github.com/hit9/ssdb.py) | SSDB Python Cli
 For this example the ssdb-py client is use.
 Before using the package it should be installed as follows:
 
-```shell
+```bash
 $ pip install ssdb
 ```
 
@@ -198,8 +178,8 @@ if resp[0] != "ok":
 Now when client is authenticated it's ready to be used
 
 ```python
-ssdb.set("a", "123");
-res = ssdb.get("a");
+ssdb.set("mykey", "myvalue");
+res = ssdb.get("mykey");
 ```
 
 ## Using with Node
@@ -214,7 +194,7 @@ node-ssdb by @hit9 | hit9 | [Repository](https://github.com/eleme/node-ssdb) | n
 For this example the node-ssdb library is use.
 Before using the package it should be installed 
 
-```shell
+```bash
 $ npm install ssdb
 ```
 
@@ -312,8 +292,8 @@ func main() {
 Now when connection is created it's ready to be used.
  
 ```go
-    conn.Cmd("set", "aa", "val-aaaaaaaaaaaaaaaaaa")
-    if rs := conn.Cmd("get", "aa"); rs.State == "ok" {
+    conn.Cmd("set", "mykey", "myvalue")
+    if rs := conn.Cmd("get", "mykey"); rs.State == "ok" {
         fmt.Println("get OK\n\t", rs.String())
     }
  }
@@ -330,13 +310,13 @@ ssdb-rb | bsm | [Repository](https://github.com/bsm/ssdb-rb) | Ruby client libra
 
 Application will need to import the library
 
-```shell
+```bash
 gem install ssdb
 ```
 
 Then create the connection using environment variables.
-```ruby
 
+```ruby
 require "ssdb"
 ssdb = SSDB.new url: ENV['SSDB_URL']
 ```
@@ -353,11 +333,11 @@ ssdb.perform("auth", ENV['SSDB_PASSWORD'])
 Now when connection is created it's ready to be used.
 
 ```ruby
-ssdb.set("mykey", "hello world")
+ssdb.set("mykey", "myvalue")
 # => true
 
 ssdb.get("mykey")
-# => "hello world"
+# => "myvalue"
 ```
 
 
@@ -367,20 +347,27 @@ Available clients
 
 Package | Author | Repository | Description
 --- | --- | --- | --- | 
-ssdb-rb | bsm | [Repository](https://github.com/bsm/ssdb-rb) | Ruby client library for SSDB 
+built-in ★ | ideawu | [Repository](https://github.com/ideawu/ssdb/tree/master/api/php) | This is the official client 
 
 Application will need to import the library
 
-```shell
-gem install ssdb
+```php
+include(dirname(__FILE__) . '/SSDB.php');
 ```
 
 Then create the connection using environment variables
 
-```ruby
+```php
 
-require "ssdb"
-ssdb = SSDB.new url: ENV['SSDB_URL']
+$host = getenv('SSDB_HOST');
+$port = getenv('SSDB_PORT');
+
+try{
+	$ssdb = new SimpleSSDB($host, $port);
+}catch(Exception $e){
+	die(__LINE__ . ' ' . $e->getMessage());
+}
+
 ```
 
 >warning
@@ -394,12 +381,12 @@ ssdb.perform("auth", ENV['SSDB_PASSWORD'])
 
 Now when connection is created it's ready to be used.
 
-```ruby
-ssdb.set("mykey", "hello world")
+```php
+$ssdb->set("mykey", "myvalue")
 # => true
 
-ssdb.get("mykey")
-# => "hello world"
+echo $ssdb->get("mykey")
+# => "myvalue"
 ```
 
 
@@ -533,7 +520,7 @@ The SSDBHub dashboard allows you to monitor overall plan usage.
 
 The dashboard can be accessed via the CLI:
 
-```term
+```bash
 $ heroku addons:open ssdb
 Opening ssdb for sharp-mountain-4005
 ```
@@ -546,24 +533,24 @@ Select SSDB from the Add-ons menu.
 In case of connection problems, please make sure you are using right credentials.
 They may be found in environment variables 
 
-`SSDB_HOST`
-
-`SSDB_PORT`
-
-`SSDB_URL`
-
-`SSDB_PASSWORD` 
+```bash
+SSDB_HOST
+SSDB_PORT
+SSDB_URL
+SSDB_PASSWORD
+```
 
 which were discussed previously.
 
 ## Migrating between plans
 
 > note
-> Application owners should carefully manage the migration timing to ensure proper application function during the migration process.
+> Application owners should carefully manage the migration timing to ensure 
+proper application function during the migration process.
 
 Use the `heroku addons:upgrade` command to migrate to a new plan.
 
-```term
+```bash
 $ heroku addons:upgrade ssdb:newplan
 -----> Upgrading ssdb:newplan to sharp-mountain-4005... done, v18 ($49/mo)
        Your plan has been updated to: ssdb:newplan
@@ -576,7 +563,7 @@ SSDBHub plugin can be removed via the CLI.
 > warning
 > This will destroy all associated data. The process is final and cannot be undone!
 
-```term
+```bash
 $ heroku addons:destroy ssdb
 -----> Removing ssdb from sharp-mountain-4005... done, v20 (free)
 ```
