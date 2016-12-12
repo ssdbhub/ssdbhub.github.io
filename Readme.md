@@ -538,25 +538,17 @@ Below is the list of supported Redis commands and how they map to SSDB.
 </table>
 
 
+
 ## Dashboard
 <!--![Alt text](https://s3.amazonaws.com/heroku-devcenter-files/article-images/1480396320-Screenshot-291116-07-08-09.png)-->
 
-The SSDBHub dashboard allows you to monitor overall plan usage. 
+The dashboard contains following components:
 
-The dashboard can be accessed via the CLI:
+#### Connection Details 
 
-```bash
-$ heroku addons:open ssdb
-Opening ssdb for sharp-mountain-4005
-```
-
-or by visiting the [Heroku Dashboard](https://dashboard.heroku.com/apps) and selecting the application in question. 
-Select SSDB from the Add-ons menu.
-
-## Troubleshooting
-
-In case of connection problems, please make sure you are using right credentials.
-They may be found in environment variables 
+The variables you should use in order to connect and authenticate against your
+SSDB cluster. 
+They shown at the top of the dashboard. 
 
 ```bash
 SSDB_HOST
@@ -564,8 +556,53 @@ SSDB_PORT
 SSDB_URL
 SSDB_PASSWORD
 ```
+ 
+#### Plan Usage
 
-which were discussed previously.
+There are a couple of important things to know about the Plan Usage 
+representation:
+
+1. It indicates how much space on the disk is used by your database.
+2. It's calculated approximately, so you might notice minor variations in it's value.
+3. It represents the size of compressed data. The actual size of data might be by 1.5 - 4 times bigger.
+
+It's important to not exceed the Plan Usage limit, provided by your plan.
+If this happens, we will send you an email and post the notice at your Dashboard.
+
+#### Backup Button
+ 
+Backup Button downloads SSDB dump file to your local computer. 
+Keep in mind that the size of the dump file might be by 1.5-4 times bigger 
+then it's indicated by Plan Usage.
+
+#### Flush All Button
+
+You can remove all data from the database by clicking "Flush All" button.
+This will schedule `flushdb` action to all SSDB nodes in your cluster. 
+It may take awhile to process this action, before the changes will be shown on
+the dashboard.
+
+## Troubleshooting
+
+In case of connection problems, please make sure you are using right 
+connection details.
+
+If you are getting an alert message on the top of the dashboard view, 
+saying that Plan Usage limit is exceeded, 
+you should consider to decrease the amount of data in your database, 
+or update your plan to get a higher limit.
+
+You may see the message, saying that your account has been suspended, 
+which means the Plan Usage limit was extensively outreached
+and your SSDB nodes were killed by the system. 
+All the data stored on them is lost in such a case.
+
+Given the above, it's a good practice to make regular backups. 
+All our plans provide possibility to download SSDB dump file to your 
+local machine.
+
+Our Premium Plans provides automatic backups, managed by us and 
+available for download for period of one week.
 
 ## Migrating between plans
 
