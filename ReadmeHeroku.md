@@ -147,13 +147,13 @@ Before using the package it should be installed as follows:
 $ pip install ssdb
 ```
 
-Application will need to import the library
+Application needs to import the library
 
 ```python
 import ssdb
 ```
 
-Then the client should be created using environment variables.
+When it's done, the client should be created using environment variables.
 
 ```python
 import os
@@ -519,7 +519,7 @@ Below is the list of supported Redis commands and how they map to SSDB.
 The dashboard can be accessed via the CLI:
 
 ```bash
-$ heroku addons:open 
+$ heroku addons:open ssdb
 Opening ssdb for sharp-mountain-4005
 ```
 
@@ -548,7 +548,7 @@ representation:
 
 1. It indicates how much space on the disk is used by your database.
 2. It's calculated approximately, so you might notice minor variations in it's value.
-3. It represents the size of compressed data. The actual size of data might be by 1.5 - 4 times bigger.
+3. It represents the size of **compressed** data. The actual size of data might be by 1.5 - 4 times bigger.
 
 It's important to not exceed the Plan Usage limit, provided by your plan.
 If this happens, we will send you an email and post the notice at your Dashboard.
