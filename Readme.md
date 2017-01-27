@@ -3,17 +3,6 @@ We provide [SSDB](http://ssdb.io) as a service.
 
 SSDB is a high performance NoSQL database.
 
-It's allready used by many companies for high throughput, low-latency operations on large data
-sets.
-
-SSDB is fast as today’s best in-memory databases.
-But, compared to others, it has a principal advantage - not
-being memory bound it's capable of storing significantly (by 100 times) more
-data.
-
-No more hybrid solutions like Redis + MongoDB.
-SSDB brings you the speed and capacity all in one.
-
 SSDBHub provides one click solution for provisioning of highly available SSDB cluster, 
 which may be accessed directly via SSDB or Redis clients.
 
